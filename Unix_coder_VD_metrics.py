@@ -350,12 +350,19 @@ def process_data(data):
         precision = precision_score(y_true, y_pred, zero_division=0)
         recall = recall_score(y_true, y_pred, zero_division=0)
         f1 = f1_score(y_true, y_pred, zero_division=0)
+        output_file = 'metrics_Unix_coder.txt'
+        with open(output_file, 'w') as f:
+            f.write("Evaluation Metrics:\n")
+            f.write(f"Accuracy: {accuracy:.4f}\n")
+            f.write(f"Precision: {precision:.4f}\n")
+            f.write(f"Recall: {recall:.4f}\n")
+            f.write(f"F1 Score: {f1:.4f}\n")
 
-        print("Evaluation Metrics:")
-        print(f"Accuracy: {accuracy:.4f}")
-        print(f"Precision: {precision:.4f}")
-        print(f"Recall: {recall:.4f}")
-        print(f"F1 Score: {f1:.4f}")
+        # print("Evaluation Metrics:")
+        # print(f"Accuracy: {accuracy:.4f}")
+        # print(f"Precision: {precision:.4f}")
+        # print(f"Recall: {recall:.4f}")
+        # print(f"F1 Score: {f1:.4f}")
     else:
         print("No data to evaluate metrics.")
 
