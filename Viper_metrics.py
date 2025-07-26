@@ -353,11 +353,11 @@ def process_data(data):
 
         output_file = 'metrics.txt'
         with open(output_file, 'w') as f:
-          f.write("Evaluation Metrics:\n")
-          f.write(f"Accuracy: {accuracy:.4f}\n")
-          f.write(f"Precision: {precision:.4f}\n")
-          f.write(f"Recall: {recall:.4f}\n")
-          f.write(f"F1 Score: {f1:.4f}\n")
+            f.write("Evaluation Metrics:\n")
+            f.write(f"Accuracy: {accuracy:.4f}\n")
+            f.write(f"Precision: {precision:.4f}\n")
+            f.write(f"Recall: {recall:.4f}\n")
+            f.write(f"F1 Score: {f1:.4f}\n")
 
         # print("Evaluation Metrics:")
         # print(f"Accuracy: {accuracy:.4f}")
