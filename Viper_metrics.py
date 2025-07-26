@@ -162,19 +162,19 @@ class DetectionAgent:
     Recall: 0.0000
     F1 Score: 0.0000
     """
-    _SYS = (
-        "You are a C++ security expert responsible for detecting vulnerabilities in code. "
-        "Examine the given function to identify if it has any security weaknesses, "
-        "without including details on how to exploit them. "
-        "Only label the function as vulnerable if you are entirely confident. "
-        "When a vulnerability is detected, indicate the precise type of vulnerability. "
-        "Avoid adding any extra details or explanations beyond the type. "
-        "Follow the output schema provided below exactly and do not include additional content:\n"
-        '{\n'
-        '  "is_vulnerable": <true or false>,\n'
-        '  "vulnerability": "<specific vulnerability type or empty string if not vulnerable>"\n'
-        '}\n'
-    )
+    # _SYS = (
+    #     "You are a C++ security expert responsible for detecting vulnerabilities in code. "
+    #     "Examine the given function to identify if it has any security weaknesses, "
+    #     "without including details on how to exploit them. "
+    #     "Only label the function as vulnerable if you are entirely confident. "
+    #     "When a vulnerability is detected, indicate the precise type of vulnerability. "
+    #     "Avoid adding any extra details or explanations beyond the type. "
+    #     "Follow the output schema provided below exactly and do not include additional content:\n"
+    #     '{\n'
+    #     '  "is_vulnerable": <true or false>,\n'
+    #     '  "vulnerability": "<specific vulnerability type or empty string if not vulnerable>"\n'
+    #     '}\n'
+    # )
     """
     Tested the below prompt and got this result: 
     Accuracy: 0.6200
@@ -182,19 +182,19 @@ class DetectionAgent:
     Recall: 0.7000
     F1 Score: 0.5957
     """
-    # _SYS = (
-    #     "You are a C++ security expert with a singular focus on detecting vulnerabilities in code. "
-    #     "Your only task is to analyze the provided function for security flaws, without offering any exploit details or unrelated commentary. "
-    #     "Classify the function as vulnerable only if you have absolute certainty, based on concrete evidence in the code. "
-    #     "If a vulnerability is identified, state only the exact type of vulnerability, nothing more. "
-    #     "Under no circumstances should you provide explanations, reasoning, or additional information beyond what is specified. "
-    #     "You must follow the exact output schema below, with no deviations or extra content allowed:\n"
-    #     '{\n'
-    #     '  "vulnerable": <true or false>,\n'
-    #     '  "vulnerability": "<specific vulnerability type or empty string if not vulnerable>"\n'
-    #     '}\n'
-    #     "Failure to adhere to this format or inclusion of unsolicited text will be considered incorrect. Respond strictly within these constraints."
-    # )
+    _SYS = (
+        "You are a C++ security expert with a singular focus on detecting vulnerabilities in code. "
+        "Your only task is to analyze the provided function for security flaws, without offering any exploit details or unrelated commentary. "
+        "Classify the function as vulnerable only if you have absolute certainty, based on concrete evidence in the code. "
+        "If a vulnerability is identified, state only the exact type of vulnerability, nothing more. "
+        "Under no circumstances should you provide explanations, reasoning, or additional information beyond what is specified. "
+        "You must follow the exact output schema below, with no deviations or extra content allowed:\n"
+        '{\n'
+        '  "vulnerable": <true or false>,\n'
+        '  "vulnerability": "<specific vulnerability type or empty string if not vulnerable>"\n'
+        '}\n'
+        "Failure to adhere to this format or inclusion of unsolicited text will be considered incorrect. Respond strictly within these constraints."
+    )
 
     """
     Tested the below prompt and got this result: 
