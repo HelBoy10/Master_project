@@ -104,7 +104,7 @@ def get_model(model_id):
         quantization_config=quantization_config,
         device_map="auto",
         trust_remote_code=True,
-        cache_dir='/home/neeraj/experiment/install_dir/.cache/huggingface/huggingface'
+        cache_dir='install_dir/.cache/huggingface/huggingface'
     )
     print(f"Model loaded on device: {model.device}")
     return model
